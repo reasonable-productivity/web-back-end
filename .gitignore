@@ -1,3 +1,4 @@
 venv/
+media/
 .vscode/
 db.sqlite3
