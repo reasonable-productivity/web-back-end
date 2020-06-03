@@ -22,7 +22,6 @@ This is an api for the Reasonable Productivity system built with the Django REST
 
 **User**
 
-* username (unique)
 * email (unique, used for login)
 * password
 
