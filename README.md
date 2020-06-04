@@ -15,10 +15,22 @@ This is an api for the Reasonable Productivity system built with the Django REST
 
 **Task**
 
-* title
-* description
+* user_id: ForeinKey
+* title: required
+* description: default=''
+* due_date: nullable
 * created_at
 * updated_at
+
+**List**
+
+* user_id
+* name
+
+**ListItem**
+
+* list_id
+* text
 
 **User**
 
@@ -34,3 +46,86 @@ This is an api for the Reasonable Productivity system built with the Django REST
 * twitter_profile
 * linkedin_profile
 * website
+
+## API
+
+**/users**
+
+* GET
+* POST
+
+**/users/:id**
+
+* GET
+* PATCH
+* DELETE
+
+**/users/:id/tasks**
+
+* GET
+* POST
+
+**/users/:id/tasks/:task_id**
+
+* GET
+* PATCH
+* DELETE
+
+**/users/:id/lists**
+
+* GET
+* POST
+
+**/users/:id/lists/:list_id**
+
+* GET
+* PATCH
+* DELETE
+
+**/users/:id/lists/:list_id/list-items**
+
+* POST
+
+**/users/:id/list-items/:item_id**
+
+* PATCH
+* DELETE
+
+**/tasks**
+
+* GET
+
+**/tasks/:id**
+
+* GET
+
+## Roadmap
+
+### Version 1.1
+
+* Recurring Tasks
+  * recurring: Boolean, default=False
+  * recurring_time: nullable
+  * recurring_frequency: daily, weekly, monthly, yearly
+  * recurring_custom: (based off of recurring frequency option, user can choose specific days/weeks, etc.)
+* Reminders
+
+### Version 1.2
+
+* Nested & Dependant Tasks
+  * Back-end: tasks should be able to be marked as dependant and sub-tasks
+  * Front-end: Users can drag tasks to be nested under other tasks, they can also
+
+### Version 1.3
+
+* Calendar View
+
+### Version 1.4
+
+* Contact integration for tasks
+
+### Version 1.5
+
+* Markdown enabled in task descriptions
+
+### Version 1.6
