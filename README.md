@@ -129,3 +129,5 @@ This is an api for the Reasonable Productivity system built with the Django REST
 * Markdown enabled in task descriptions
 
 ### Version 1.6
+
+* Calendar Integrations
