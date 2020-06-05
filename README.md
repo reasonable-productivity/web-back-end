@@ -26,11 +26,15 @@ This is an api for the Reasonable Productivity system built with the Django REST
 
 * user_id
 * name
+* created_at
+* updated_at
 
 **ListItem**
 
 * list_id
 * text
+* created_at
+* updated_at
 
 **User**
 
@@ -122,7 +126,7 @@ This is an api for the Reasonable Productivity system built with the Django REST
 
 ### Version 1.4
 
-* Contact integration for tasks
+* Contact integration for tasks: Users can sync with contacts
 
 ### Version 1.5
 
