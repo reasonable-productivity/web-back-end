@@ -111,6 +111,7 @@ This is an api for the Reasonable Productivity system built with the Django REST
 * Auth endpoints
   * Login
   * Update password, forgot password
+* Add searching, sorting, filtering for tasks and lists
 
 ### Version 1.1
 
