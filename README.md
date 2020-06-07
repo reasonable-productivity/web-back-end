@@ -106,6 +106,12 @@ This is an api for the Reasonable Productivity system built with the Django REST
 
 ## Roadmap
 
+### Version 1.0
+
+* Auth endpoints
+  * Login
+  * Update password, forgot password
+
 ### Version 1.1
 
 * Recurring Tasks
