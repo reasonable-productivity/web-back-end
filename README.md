@@ -43,6 +43,7 @@ This is an api for the Reasonable Productivity system built with the Django REST
 
 **UserProfile**
 
+* user_id
 * first_name
 * last_name
 * image
