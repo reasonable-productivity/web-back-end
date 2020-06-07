@@ -43,6 +43,7 @@ This is an api for the Reasonable Productivity system built with the Django REST
 
 **UserProfile**
 
+* user_id
 * first_name
 * last_name
 * image
@@ -104,6 +105,13 @@ This is an api for the Reasonable Productivity system built with the Django REST
 * GET
 
 ## Roadmap
+
+### Version 1.0
+
+* Auth endpoints
+  * Login
+  * Update password, forgot password
+* Add searching, sorting, filtering for tasks and lists
 
 ### Version 1.1
 
