@@ -1,10 +1,13 @@
 asgiref==3.2.7
 Django==3.0.6
+django-cors-headers==3.3.0
 djangorestframework==3.11.0
+drf-nested-routers==0.91
 flake8==3.8.2
 importlib-metadata==1.6.0
 mccabe==0.6.1
 Pillow==7.1.2
+psycopg2==2.8.5
 pycodestyle==2.6.0
 pyflakes==2.2.0
 pytz==2020.1
