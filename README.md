@@ -18,6 +18,7 @@ This is an api for the Reasonable Productivity system built with the Django REST
 * user_id: ForeinKey
 * title: required
 * description: default=''
+* completed: boolean
 * due_date: nullable
 * created_at
 * updated_at
