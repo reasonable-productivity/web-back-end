@@ -10,7 +10,7 @@ class ListSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = List
-        fields = ['name', 'description', 'user',
+        fields = ['id', 'name', 'description', 'user',
                   'created_at', 'updated_at']
 
 
@@ -20,7 +20,7 @@ class ListItemSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = ListItem
-        fields = ['text', 'parent_list',
+        fields = ['id', 'text', 'parent_list',
                   'created_at', 'updated_at']
 
 
