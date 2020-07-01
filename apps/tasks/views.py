@@ -11,7 +11,8 @@ class TaskSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Task
         fields = ['id', 'title', 'description', 'user',
-                  'created_at', 'updated_at']
+                  'completed', 'created_at', 'updated_at',
+                  'date', 'category']
 
 
 class TaskViewSet(viewsets.ModelViewSet):
