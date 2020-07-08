@@ -53,6 +53,15 @@ This is an api for the Reasonable Productivity system built with the Django REST
 * linkedin_profile
 * website
 
+**Project**
+
+* user_id
+* title
+* description
+* created_at
+* updated_at
+* due_date (for version 2)
+
 ## API
 
 **/users**
