@@ -23,6 +23,12 @@ This is an api for the Reasonable Productivity system built with the Django REST
 * created_at
 * updated_at
 
+**Tag**
+
+* text: CharField(max_length=25)
+* color: CharField(max_length=6)
+* *many to many relationship with Task*
+
 **List**
 
 * user_id
