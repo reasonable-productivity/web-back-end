@@ -1,25 +1,14 @@
 from django.urls import path, include
-from rest_framework import routers
+from rest_framework_nested import routers
 from .views import ProjectViewSet, ProjectTaskViewSet
 
-router = routers.DefaultRouter()
+router = routers.SimpleRouter()
 router.register(r'', ProjectViewSet)
+
+project_router = routers.NestedSimpleRouter(router, r'', lookup='list')
+project_router.register('tasks', ProjectTaskViewSet, basename='project')
 
 urlpatterns = [
     path('', include(router.urls)),
-    # path('{pk}/get_project_tasks', include(router.urls)),
+    path('', include(project_router.urls)),
 ]
-
-# from rest_framework_nested import routers
-# from .views import ProjectViewSet, ProjectTaskViewSet
-
-# router = routers.SimpleRouter()
-# router.register(r'', ProjectViewSet)
-
-# project_router = routers.NestedSimpleRouter(router, r'', lookup='project')
-# project_router.register('', ProjectTaskViewSet, basename='project')
-
-# urlpatterns = [
-#     path('', include(router.urls)),
-#     path('get_project_tasks', include(project_router.urls)),
-# ]

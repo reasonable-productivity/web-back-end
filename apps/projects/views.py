@@ -29,16 +29,8 @@ class ProjectViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 
-class ProjectTaskViewSet(viewsets.ModelViewSet):
-    queryset = Task.objects.all()
-    serializer_class = TaskSerializer
-
-    @action(detail=False)
-    def get_project_tasks(self, request, pk=None):
-        project_tasks = Task.objects.filter(project=pk)
-        serializer = self.get_serializer(project_tasks)
+class ProjectTaskViewSet(viewsets.ViewSet):
+    def list(self, request, *args, **kwargs):
+        queryset = Task.objects.filter(project=kwargs['list_pk'])
+        serializer = TaskSerializer(queryset, many=True)
         return Response(serializer.data)
-    # def get_queryset(self):
-    #     project_id = self.kwargs['pk']
-    #     return Task.objects.filter(project=project_id)
-        # return Task.objects.all()
